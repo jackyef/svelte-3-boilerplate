@@ -8,13 +8,13 @@ export default {
   output: {
     sourcemap: true,
     name: 'app',
-    format: 'iife', 
-    file: './server/build/server.js'
+    format: 'iife',
+    file: './server/build/server.js',
   },
 
   plugins: [
     svelte({
-			// enable run-time checks when not in production
+      // enable run-time checks when not in production
       dev: !production,
 
       // By default, the client-side compiler is used. You
@@ -23,14 +23,14 @@ export default {
     }),
 
     // If you have external dependencies installed from
-		// npm, you'll most likely need these plugins. In
-		// some cases you'll need additional configuration —
-		// consult the documentation for details:
-		// https://github.com/rollup/rollup-plugin-commonjs
+    // npm, you'll most likely need these plugins. In
+    // some cases you'll need additional configuration —
+    // consult the documentation for details:
+    // https://github.com/rollup/rollup-plugin-commonjs
     resolve(),
   ],
 
   watch: {
-		clearScreen: false,
-	},
-}
+    clearScreen: false,
+  },
+};
