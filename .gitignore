@@ -1,6 +1,9 @@
 # node_modules
 /node_modules/
 
+# static files built
+/public/
+
 # build files
 */**/build/**/*
 

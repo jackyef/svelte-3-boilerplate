@@ -8,10 +8,14 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "start": "rollup -c -w",
-    "dev:client": "sirv public --dev"
+    "build": "NODE_ENV=production rollup -c",
+    "start": "sirv public",
+    "dev": "run-p start:dev autobuild",
+    "start:dev": "sirv public --dev",
+    "autobuild": "rollup -c -w"
   },
   "devDependencies": {
+    "npm-run-all": "^4.1.5",
     "rollup": "^1.12.3",
     "rollup-plugin-bundle-html": "^0.2.0",
     "rollup-plugin-commonjs": "^10.0.0",
