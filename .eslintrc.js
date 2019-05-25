@@ -13,6 +13,9 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
+  plugins: [
+    'svelte3',
+  ],
   rules: {
     'indent': 0,
     'no-tabs': 0,

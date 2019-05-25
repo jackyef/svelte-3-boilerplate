@@ -4,7 +4,7 @@
   import { Home, About } from "./routes";
 
   export let url = "";
-	export let name;
+  export let name;
 </script>
 
 <style>

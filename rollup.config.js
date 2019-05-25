@@ -12,39 +12,39 @@ export default {
   output: {
     sourcemap: true,
     name: 'app',
-    format: 'iife', 
-    file: 'public/client.js'
+    format: 'iife',
+    file: 'public/client.js',
   },
 
   plugins: [
     svelte({
-			// enable run-time checks when not in production
-			dev: !production,
-			// we'll extract any component CSS out into
-			// a separate file — better for performance
-			css: css => {
-				css.write('public/bundle.css');
-			}
+      // enable run-time checks when not in production
+      dev: !production,
+      // we'll extract any component CSS out into
+      // a separate file — better for performance
+      css: (css) => {
+        css.write('public/bundle.css');
+      },
     }),
 
     // If you have external dependencies installed from
-		// npm, you'll most likely need these plugins. In
-		// some cases you'll need additional configuration —
-		// consult the documentation for details:
-		// https://github.com/rollup/rollup-plugin-commonjs
+    // npm, you'll most likely need these plugins. In
+    // some cases you'll need additional configuration —
+    // consult the documentation for details:
+    // https://github.com/rollup/rollup-plugin-commonjs
     resolve(),
 
-		commonjs(),
-    
+    commonjs(),
+
     // Watch the `public` directory and refresh the
-		// browser on changes when not in production
+    // browser on changes when not in production
     !production && livereload('public'),
-    
+
     production && terser(),
 
     html({
       template: './tools/static/index.html', // 'src/template.html',
-      dest: "public",
+      dest: 'public',
       filename: 'index.html',
       inject: 'body',
       // externals: [
@@ -55,6 +55,6 @@ export default {
   ],
 
   watch: {
-		clearScreen: false,
-	},
-}
+    clearScreen: false,
+  },
+};
