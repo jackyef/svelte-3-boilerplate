@@ -7,6 +7,9 @@
 # build files
 */**/build/**/*
 
+# public files
+/public/
+
 # log files
 *.log
 

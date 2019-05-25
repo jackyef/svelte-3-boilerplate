@@ -2027,6 +2027,11 @@ supports-color@^6.1.0:
   dependencies:
     has-flag "^3.0.0"
 
+svelte-routing@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/svelte-routing/-/svelte-routing-1.1.1.tgz#9bab1205b7a9ccdccc01678bb97b31e849afbb03"
+  integrity sha512-aJDrn50CCQOPbzrMcE0yxxMVgl75uLxdmB06sZ3vr3NuCXS4zXdZyZMpHpP7+uPlxp1fcMy0/VBbKGVuroedVw==
+
 svelte@^3.4.2:
   version "3.4.2"
   resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.4.2.tgz#55e34d7a53f9a732387dbf0fcb68e2fa4b598c93"

@@ -2,11 +2,15 @@
   "version": 3,
   "file": "bundle.css",
   "sources": [
-    "..\\client\\App.svelte"
+    "..\\client\\App.svelte",
+    "..\\client\\routes\\Home\\Home.svelte",
+    "..\\client\\routes\\About\\About.svelte"
   ],
   "sourcesContent": [
-    "<!-- App.svelte -->\r\n<script>\r\n  import { Router, Link, Route } from \"svelte-routing\";\r\n  import { Home, About, Blog, BlogPost } from \"./routes\";\r\n\r\n  export let url = \"\";\r\n\texport let name;\r\n</script>\r\n\r\n<style>\r\n\th1 {\r\n\t\tcolor: purple;\r\n\t}\r\n</style>\r\n\r\n<h1>Hello {name}!</h1>\r\n<Router url=\"{url}\">\r\n  <nav>\r\n    <Link to=\"/\">Home</Link>\r\n    <Link to=\"about\">About</Link>\r\n    <Link to=\"blog\">Blog</Link>\r\n  </nav>\r\n  <div>\r\n    <Route path=\"blog/:id\" component=\"{BlogPost}\" />\r\n    <Route path=\"blog\" component=\"{Blog}\" />\r\n    <Route path=\"about\" component=\"{About}\" />\r\n    <Route path=\"/\"><Home /></Route>\r\n  </div>\r\n</Router>"
+    "<!-- App.svelte -->\r\n<script>\r\n  import { Router, Link, Route } from \"svelte-routing\";\r\n  import { Home, About } from \"./routes\";\r\n\r\n  export let url = \"\";\r\n\texport let name;\r\n</script>\r\n\r\n<style>\r\n\th1 {\r\n\t\tcolor: purple;\r\n\t}\r\n</style>\r\n\r\n<h1>Hello {name}!</h1>\r\n<Router url=\"{url}\">\r\n  <nav>\r\n    <Link to=\"/\">Home</Link>\r\n    <Link to=\"about\">About</Link>\r\n  </nav>\r\n  <div>\r\n    <Route path=\"about\" component=\"{About}\" />\r\n    <Route path=\"/\" component=\"{Home}\" />\r\n  </div>\r\n</Router>",
+    "<div>\r\n  <h1>This is Home.svelte</h1>\r\n</div>\r\n\r\n<style>\r\n  div {\r\n    padding: 16px;\r\n    margin: 16px;\r\n    border-radius: 8px;\r\n    background-color: firebrick;\r\n    color: white;\r\n  }\r\n</style>",
+    "<div>\r\n  <h1>This is About.svelte</h1>\r\n</div>\r\n\r\n<style>\r\n  div {\r\n    padding: 16px;\r\n    margin: 16px;\r\n    border-radius: 8px;\r\n    background-color: darkblue;\r\n    color: white;\r\n  }\r\n</style>"
   ],
   "names": [],
-  "mappings": "AAUC,EAAE,cAAC,CAAC,AACH,KAAK,CAAE,MAAM,AACd,CAAC"
+  "mappings": "AAUC,EAAE,cAAC,CAAC,AACH,KAAK,CAAE,MAAM,AACd,CAAC;ACPA,GAAG,eAAC,CAAC,AACH,OAAO,CAAE,IAAI,CACb,MAAM,CAAE,IAAI,CACZ,aAAa,CAAE,GAAG,CAClB,gBAAgB,CAAE,SAAS,CAC3B,KAAK,CAAE,KAAK,AACd,CAAC;ACND,GAAG,cAAC,CAAC,AACH,OAAO,CAAE,IAAI,CACb,MAAM,CAAE,IAAI,CACZ,aAAa,CAAE,GAAG,CAClB,gBAAgB,CAAE,QAAQ,CAC1B,KAAK,CAAE,KAAK,AACd,CAAC"
 }
