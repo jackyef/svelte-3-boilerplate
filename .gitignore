@@ -5,7 +5,7 @@
 /public/
 
 # build files
-*/**/build/**/*
+*/build/**/*
 
 # public files
 /public/
