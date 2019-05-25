@@ -1,10 +1,10 @@
-const Koa = require('koa');
-
 import App from '../client/App.svelte';
+
+const Koa = require('koa');
 
 const app = new Koa();
 
-app.use(async ctx => {
+app.use(async (ctx) => {
   const { html, css, head } = App.render({ url: ctx.url });
 
   ctx.body = `
@@ -20,4 +20,4 @@ app.use(async ctx => {
 
 app.listen(3000);
 
-console.log("Server renderer is listening on port 3000...");
+console.log('Server renderer is listening on port 3000...');
