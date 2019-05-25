@@ -6,5 +6,16 @@
   "repository": "git@github.com:jackyef/svelte-3-boilerplate.git",
   "author": "Deni Cho & Jacky Efendi",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "devDependencies": {
+    "rollup": "^1.12.3",
+    "svelte": "^3.4.2"
+  },
+  "dependencies": {
+    "rollup-plugin-commonjs": "^10.0.0",
+    "rollup-plugin-livereload": "^1.0.0",
+    "rollup-plugin-node-resolve": "^5.0.0",
+    "rollup-plugin-svelte": "^5.0.3",
+    "rollup-plugin-terser": "^5.0.0"
+  }
 }
