@@ -5,15 +5,21 @@ import commonjs from 'rollup-plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 
+require('dotenv').config();
+
 const production = process.env.NODE_ENV === 'production';
 
 export default {
-  input: 'client/index.js',
+  input: {
+    client: 'client/index.js',
+  },
   output: {
-    sourcemap: true,
     name: 'app',
     format: 'iife',
-    file: 'public/client.js',
+    dir: 'public',
+    entryFileNames: '[name].[hash].js',
+    sourcemap: true,
+    chunkNames: 'chunk.[name].[hash].js',
   },
 
   plugins: [
