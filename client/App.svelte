@@ -3,7 +3,6 @@
   import { Home, About } from './routes';
 
   export let url = '';
-  export let name;
 </script>
 
 <style>
@@ -14,7 +13,7 @@
 
 <!-- App.svelte -->
 
-<h1>Hello {name}!</h1>
+<h1>Hello!</h1>
 <Router {url}>
   <nav>
     <Link to="/">Home</Link>
