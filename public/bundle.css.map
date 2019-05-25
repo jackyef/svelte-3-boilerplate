@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "file": "bundle.css",
+  "sources": [
+    "..\\client\\App.svelte"
+  ],
+  "sourcesContent": [
+    "<!-- App.svelte -->\r\n<script>\r\n  import { Router, Link, Route } from \"svelte-routing\";\r\n  import { Home, About, Blog, BlogPost } from \"./routes\";\r\n\r\n  export let url = \"\";\r\n\texport let name;\r\n</script>\r\n\r\n<style>\r\n\th1 {\r\n\t\tcolor: purple;\r\n\t}\r\n</style>\r\n\r\n<h1>Hello {name}!</h1>\r\n<Router url=\"{url}\">\r\n  <nav>\r\n    <Link to=\"/\">Home</Link>\r\n    <Link to=\"about\">About</Link>\r\n    <Link to=\"blog\">Blog</Link>\r\n  </nav>\r\n  <div>\r\n    <Route path=\"blog/:id\" component=\"{BlogPost}\" />\r\n    <Route path=\"blog\" component=\"{Blog}\" />\r\n    <Route path=\"about\" component=\"{About}\" />\r\n    <Route path=\"/\"><Home /></Route>\r\n  </div>\r\n</Router>"
+  ],
+  "names": [],
+  "mappings": "AAUC,EAAE,cAAC,CAAC,AACH,KAAK,CAAE,MAAM,AACd,CAAC"
+}
