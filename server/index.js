@@ -9,8 +9,10 @@ app.use(async (ctx) => {
 
   ctx.body = `
     <html>
-    <head>${head}</head>
-    <style>${css.code}</style>
+    <head>
+      ${head}
+      <style>${css.code}</style>
+    </head>
     <body>
       <div id="root">${html}</div>
     </body>

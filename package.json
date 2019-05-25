@@ -35,6 +35,7 @@
     "svelte": "^3.4.2"
   },
   "dependencies": {
+    "dotenv": "^8.0.0",
     "koa": "^2.7.0",
     "svelte-routing": "^1.1.1"
   }
