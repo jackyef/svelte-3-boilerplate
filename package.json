@@ -10,12 +10,12 @@
   "scripts": {
     "build": "NODE_ENV=production rollup -c",
     "start": "sirv public",
-    "dev": "run-p start:dev autobuild",
-    "start:dev": "sirv public --dev",
-    "dev:server": "run-p dev:build:server dev:start:server",
-    "dev:build:server": "rollup -c ./server/rollup.config.js -w",
-    "dev:start:server": "nodemon ./server/build/server.js",
-    "autobuild": "rollup -c -w"
+    "dev": "run-p dev:build dev:start",
+    "dev:build": "rollup -c ./server/rollup.config.js -w",
+    "dev:start": "nodemon ./server/build/server.js",
+    "dev:client": "run-p dev:client:build dev:client:start",
+    "dev:client:build": "rollup -c -w",
+    "dev:client:start": "sirv public --dev"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
