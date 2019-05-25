@@ -1,0 +1,10 @@
+{
+  "name": "svelte-3-boilerplate",
+  "version": "0.0.1",
+  "description": "Svelte 3 Boilerplate using rollup",
+  "main": "index.js",
+  "repository": "git@github.com:jackyef/svelte-3-boilerplate.git",
+  "author": "Deni Cho & Jacky Efendi",
+  "license": "MIT",
+  "private": false
+}
